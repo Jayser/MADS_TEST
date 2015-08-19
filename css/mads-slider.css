@@ -1,0 +1,45 @@
+.mads-slider {
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.mads-slider,
+.mads-slider__item {
+    width: 400px;
+    height: 200px;
+}
+
+.mads-slider__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+/* Slide */
+.mads-slider__slide {
+    transition-property: left;
+    transition-timing-function: ease;
+}
+
+.mads-slider__slide
+.mads-slider__item {
+    float: left;
+}
+
+/* Fade In */
+.mads-slider__fade-in
+.mads-slider__item {
+    transition-property: opacity;
+    transition-timing-function: ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mads-slider__fade-in
+.mads-slider__item:first-child {
+    opacity: 0;
+}

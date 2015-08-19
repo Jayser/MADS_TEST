@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MADS</title>
+    <link href="css/mads-slider.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- DOM@ mads-slider -->
+    <div id="mads-slider" class="mads-slider"></div>
+    <div id="mads-slider1" class="mads-slider"></div>
+
+    <!-- include@ mads-slider -->
+    <script src="js/utils.js"></script>
+    <script src="js/mads-slider.js"></script>
+
+    <!-- config@ mads-slider -->
+    <script type="text/javascript">
+        var config = {
+            // arbitrary number of images
+            images: [
+                'http://placehold.it/400x200/608d2e/ffffff?text=1',
+                'http://placehold.it/400x200/315376/ffffff?text=2',
+                'http://placehold.it/400x200/f08b16/ffffff?text=3',
+                'http://placehold.it/400x200/c44955/ffffff?text=4'
+            ],
+            // possible values: 'auto', 'manual', 'automanual'
+            mode: 'automanual',
+            // arbitrary interger (miliseconds)
+            swipeSpeed: 500,
+            // arbitrary interger (miliseconds). This is used in 'auto' and 'automanual' modes
+            swipeDelay: 3000
+        };
+
+        var swipeSlider = new apps.swipeSlider(apps.utils.extend(config, {
+            renderTo: 'mads-slider'
+        }));
+
+        var fadeSlider = new apps.fadeSlider(apps.utils.extend(config, {
+            renderTo: 'mads-slider1'
+        }));
+
+    </script>
+</body>
+</html>
